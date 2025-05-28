@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Data Input Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            margin-top: 10px;
+            display: block;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form action="/predict" method="post">
+        <h2>User Data Input Form</h2>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" step="0.01">
+
+        <label for="height">Height in meters:</label>
+        <input type="number" id="height" name="height" step="0.01">
+
+        <label for="weight">Weight in Kilograms:</label>
+        <input type="number" id="weight" name="weight" step="0.01">
+
+        <label for="family_history_with_overweight">Family history of overweight:</label>
+        <select id="family_history_with_overweight" name="family_history_with_overweight">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select>
+
+        <label for="favc">Frequent consumption of high caloric food (FAVC):</label>
+        <select id="favc" name="favc">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <label for="fcvc">Frequency of vegetables consumption (FCVC):</label>
+        <input type="number" id="fcvc" name="fcvc" step="0.01">
+
+        <label for="ncp">Number of main meals (NCP):</label>
+        <input type="number" id="ncp" name="ncp" step="0.01">
+
+        <label for="caec">Consumption of food between meals (CAEC):</label>
+        <select id="caec" name="caec">
+            <option value="Sometimes">Sometimes</option>
+            <option value="Always">Always</option>
+            <option value="Frequently">Frequently</option>
+            <option value="no">No</option>
+        </select>
+
+        <label for="smoke">Smoking:</label>
+        <select id="smoke" name="smoke">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select>
+
+        <label for="ch2o">Water drinking per day (CH2O):</label>
+        <input type="number" id="ch2o" name="ch2o" step="0.01">
+
+        <label for="scc">Calories monitoring (SCC):</label>
+        <select id="scc" name="scc">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select>
+
+        <label for="faf">Physical activity frequency (FAF):</label>
+        <input type="number" id="faf" name="faf" step="0.01">
+
+        <label for="tue">Time using technology devices (TUE):</label>
+        <input type="number" id="tue" name="tue" step="0.01">
+
+        <label for="calc">Alcohol consumption (CALC):</label>
+        <select id="calc" name="calc">
+            <option value="Sometimes">Sometimes</option>
+            <option value="no">No</option>
+            <option value="Frequently">Frequently</option>
+            <option value="Always">Always</option>
+        </select>
+
+        <label for="mtrans">Mode of Transportation (MTRANS):</label>
+        <select id="mtrans" name="mtrans">
+            <option value="Public_Transportation">Public Transportation</option>
+            <option value="Automobile">Automobile</option>
+            <option value="Walking">Walking</option>
+            <option value="Bike">Bike</option>
+            <option value="Motorbike">Motorbike</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
